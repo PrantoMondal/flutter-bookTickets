@@ -3,6 +3,7 @@ import 'package:booktickets/utils/app_styles.dart';
 import 'package:booktickets/widgets/thick_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class TicketView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text("NYC",style: Styles.headlineStyle3.copyWith(color: Colors.white),),
+                      Text("BD",style: Styles.headlineStyle3.copyWith(color: Colors.white),),
                       const Spacer(),
 
                       ThickContainer(),
@@ -59,9 +60,48 @@ class TicketView extends StatelessWidget {
                       ThickContainer(),
 
                       const Spacer(),
-                      Text("London",style: Styles.headlineStyle3.copyWith(color: Colors.white),),
+                      Text("JPN",style: Styles.headlineStyle3.copyWith(color: Colors.white),),
 
                     ],
+                  ),
+                  const Gap(3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 100,
+                        child: Text("Bangladesh",style: Styles.headlineStyle4.copyWith(color: Colors.white),),
+                      ),
+                      Text("8H 30M",style: Styles.headlineStyle4.copyWith(color: Colors.white),),
+                      SizedBox(
+                        width: 100,
+                        child: Text("Japan",textAlign: TextAlign.end,style: Styles.headlineStyle4.copyWith(color: Colors.white),),
+
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Styles.orangeColor,
+                borderRadius: const BorderRadius.only(bottomRight: Radius.circular(21),bottomLeft: Radius.circular(21))
+              ),
+              child: Row(
+                children: const [
+                  SizedBox(
+                    height: 10,
+                    width: 10,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          // topRight: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        )
+                      ),
+                    ),
                   )
                 ],
               ),
