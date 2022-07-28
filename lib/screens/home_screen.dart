@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../utils/app_styles.dart';
+import 'hotel_screens.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -118,6 +119,19 @@ class HomeScreen extends StatelessWidget {
                     )),
               ],
             ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.only(left: 20),
+              child: Row(
+                children: [
+                  HotelScreen(),
+                  HotelScreen(),
+                  HotelScreen(),
+                  HotelScreen(),
+                ],
+              )
           )
 
         ],
