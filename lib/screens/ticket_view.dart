@@ -1,7 +1,6 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
 import 'package:booktickets/widgets/thick_container.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -12,7 +11,7 @@ class TicketView extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return SizedBox(
-      width: size.width,
+      width: size.width*.85,
       height: 200,
       child: Container(
         margin: const EdgeInsets.only(left: 16),
@@ -174,7 +173,7 @@ class TicketView extends StatelessWidget {
                   borderRadius: const BorderRadius.only(
                       bottomRight: Radius.circular(21),
                       bottomLeft: Radius.circular(21))),
-              padding: EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 16),
+              padding: const EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 16),
               child: Column(
                 children: [
                   Row(
